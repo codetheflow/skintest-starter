@@ -13,10 +13,10 @@ npm run build:watch
 
 In the second terminal:
 ```sh
-npm run start
+npm run start:watch
 ```
 
-Rename `src\todomvc` folder to your project name and start getting glory from building the awesome ui tests!
+Rename `src\todomvc` folder to the your `project-name` and start getting glory from building the awesome ui tests!
 
 ### Tags
 

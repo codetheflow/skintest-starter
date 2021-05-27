@@ -1,26 +1,22 @@
-import { platform } from '@skintest/platform';
-import { exploreFeatures, exploreNodeProjects, NodeProjectSite, playwrightLauncher, tagFilter, ttyLogo, ttyReport, ttySummaryReport } from '@skintest/plugins';
+import { nodePlatform } from '@skintest/platform';
+import { exploreNodeProjects, playwrightLauncher, tagFilter, ttyLogo, ttyReport, ttySummaryReport } from '@skintest/plugins';
 
-const start = (site: NodeProjectSite) =>
-  platform()
-    .newProject(site.name, async project => {
-      await project.run(
-        playwrightLauncher({
-          headless: true,
-          timeout: 30 * 1000,
-        })
-        , exploreFeatures({
-          cwd: site.featuresPath
-        })
-        , tagFilter({
-          tags: ['#now'],
-          include: 'all-when-no-matched',
-        })
-        , ttyLogo()
-        , ttyReport()
-        , ttySummaryReport()
-      );
-    })
+const launcher = playwrightLauncher({
+  headless: true,
+  timeout: 30 * 1000,
+});
 
+const plugins = [
+  ttyLogo()
+  , ttyReport()
+  , ttySummaryReport()
+  , tagFilter({
+    include: ['#now'],
+    method: 'all-when-no-matched',
+  })
+];
+
+const platform = nodePlatform(...plugins);
 exploreNodeProjects(__dirname)
-  .forEach(start);
+  .forEach(uri => platform.newProject(uri, project => project.run(launcher)))
+  .then(() => platform.destroy());
