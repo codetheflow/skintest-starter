@@ -1,8 +1,10 @@
-# My test projects
+# skintest-starter
 
 To get started with development:
 
 ```sh
+git clone https://github.com/codetheflow/skintest-starter.git
+cd skintest-starter
 npm i
 ```
 
