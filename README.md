@@ -18,7 +18,7 @@ In the second terminal:
 npm run start:watch
 ```
 
-Rename `src\todomvc` folder to the your `project-name` and start getting glory from building the awesome ui tests!
+Copy `src\todomvc` folder to the your `src/<my-project>`folder, modify `skintest.ts` with a new project path, start getting glory from building the awesome ui tests!
 
 ### Tags
 
