@@ -30,7 +30,7 @@ Use `#now` tag in the feature or scenario name to work with a particular test ca
 
 ### Debugging
 
-The simplest way to start debugging is to enable the `Auto Attach` feature in the vscode:
+The simplest way to start debugging is to enable the `Auto Attach` in the vscode:
 
 > `Ctrl+Shift+P` -> `Debug: Toggle Auto Attach` -> `Smart`
 
