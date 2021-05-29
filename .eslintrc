@@ -25,7 +25,8 @@
           "function"
         ],
         "format": [
-          "snake_case"
+          "snake_case",
+          "UPPER_CASE",
         ]
       }
     ]
