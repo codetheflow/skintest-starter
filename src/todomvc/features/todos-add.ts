@@ -3,9 +3,7 @@ import { page } from '../components/page';
 import { todos } from '../components/todos';
 import { add_todo } from '../recipes/add-todo';
 import { clear_todos } from '../recipes/clear-todos';
-import { copy_from } from '../recipes/copy-from';
 import { generate_todos } from '../recipes/generate-todos';
-import { paste_to } from '../recipes/paste-to';
 
 feature('todos add')
   .before('scenario'
@@ -51,7 +49,7 @@ feature('todos add')
     , I.see(todos.item_label_at(0), has.text, 'pass the exams')
   )
 
-  .scenario('check the list supports many todos'
+  .scenario('#now check the list supports many todos'
     , I.do(generate_todos, 10)
     , I.test('list contains all the items')
     , I.see(todos.list, has.length, 10)
@@ -75,8 +73,6 @@ feature('todos add')
 
   .scenario('check that todo item can be copy pasted by using clipboard'
     , I.do(add_todo, 'feed dragon')
-    , I.do(copy_from, todos.item_label_at(0))
-    , I.do(paste_to, todos.what)
     , I.test('input has the same value as first todo')
     , I.see(todos.what, has.text, 'feed dragon')
   )
