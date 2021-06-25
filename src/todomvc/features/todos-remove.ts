@@ -4,7 +4,8 @@ import { todos } from '../components/todos';
 import { add_todo } from '../recipes/add-todo';
 import { clear_todos } from '../recipes/clear-todos';
 
-feature('todos remove')
+feature()
+
   .before('scenario'
     , I.open(page.start)
     , I.goto(todos.url)
@@ -15,6 +16,6 @@ feature('todos remove')
     , I.do(add_todo, 'item to remove')
     , I.hover(todos.item_label_at(0))
     , I.click(todos.item_remove_at(0))
-    , I.test('todos list is empty after remove button clicked')
+    , I.check('todos list is empty after remove button clicked')
     , I.see(todos.list, has.length, 0)
   )

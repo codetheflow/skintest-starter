@@ -25,6 +25,6 @@ const platform = nodePlatform(...plugins);
 exploreNodeProjects(PROJECTS_FOLDER)
   // if you want to run multiple projects just 
   // comment out filter function or modify the filter predicate
- // .filter(uri => /todomvc/.test(uri))
+  // .filter(uri => /todo/.test(uri))
   .forEach(uri => platform.newProject(uri, project => project.run(launcher)))
   .finally(() => platform.destroy());
