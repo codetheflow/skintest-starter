@@ -10,7 +10,6 @@
     "source.organizeImports": true
   },
   "eslint.workingDirectories": [
-    "packages",
-    "sandbox"
+    "packages"
   ],
 }

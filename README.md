@@ -1,24 +1,9 @@
-# skintest-starter
+# my-project
 
-To get started with development:
-
+Just start with next:
 ```sh
-git clone https://github.com/codetheflow/skintest-starter.git
-cd skintest-starter
-npm i
+yarn skintest
 ```
-
-In the first terminal:
-```sh
-npm run build:watch
-```
-
-In the second terminal:
-```sh
-npm run start:watch
-```
-
-Copy `src\todomvc` folder to the your `src/<my-project>`folder, modify `skintest.ts` with a new project path, start getting glory from building the awesome ui tests!
 
 ### Tags
 
@@ -36,24 +21,9 @@ The simplest way to start debugging is to enable the `Auto Attach` in the vscode
 
 https://code.visualstudio.com/docs/nodejs/nodejs-debugging
 
-### Dev tools
-
-Use `__debug`, `__inspect` and `__pause` commands to analyze selectors and test run state.
-
-```typescript
-, I.__inspect(todos.list)
-```
-
 ### Linting
 
 ```sh
-$ npm run lint
-```
-
-It's also a good idea to hook up your editor to an eslint plugin.
-
-To fix lint errors from the command line:
-
-```sh
-$ npm run lint -- --fix
+$ yarn lint
+$ yarn lint --fix
 ```

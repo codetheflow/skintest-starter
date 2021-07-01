@@ -3,7 +3,6 @@
   "compilerOptions": {
     "baseUrl": ".",
     "declaration": true,
-    "experimentalDecorators": true,
     "module": "CommonJS",
     "moduleResolution": "node",
     "sourceMap": true,
@@ -16,15 +15,10 @@
     ],
     "types": [
       "node"
-    ],
-    "outDir": "dist",
-    "rootDir": "src"
+    ]
   },
   "exclude": [
     "node_modules",
     "dist",
-  ],
-  "include": [
-    "**/*.ts"
   ]
 }
